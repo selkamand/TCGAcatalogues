@@ -9,6 +9,9 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/TCGAdecomp)](https://CRAN.R-project.org/package=TCGAdecomp)
+[![Codecov test
+coverage](https://codecov.io/gh/selkamand/TCGAdecomp/branch/master/graph/badge.svg)](https://app.codecov.io/gh/selkamand/TCGAdecomp?branch=master)
+[![R-CMD-check](https://github.com/selkamand/TCGAdecomp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/selkamand/TCGAdecomp/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 TCGAdecomp is a data package containing each TCGA WGS dataset decomposed
