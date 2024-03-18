@@ -7,7 +7,7 @@
 decomp_load(
   dataset,
   source = c("MC3", "Firehose"),
-  type = c("SBS_96", "SBS_6", "SBS_1536"),
+  type = c("SBS_96", "SBS_6", "SBS_1536", "DBS_78", "DBS_1248", "ID83"),
   genome = c("hg19", "hg38"),
   dataframe = FALSE
 )

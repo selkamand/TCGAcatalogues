@@ -57,7 +57,7 @@ decomp_available <- function(){
 #'         If dataframe is TRUE, a single data frame with the entire dataset is returned.
 #' @export
 #' @inherit decomp_available examples
-decomp_load <- function(dataset, source = c('MC3', 'Firehose'), type = c('SBS_96', 'SBS_6','SBS_1536'), genome = c('hg19', 'hg38'), dataframe = FALSE){
+decomp_load <- function(dataset, source = c('MC3', 'Firehose'), type = c('SBS_96', 'SBS_6','SBS_1536', 'DBS_78', 'DBS_1248', 'ID83'), genome = c('hg19', 'hg38'), dataframe = FALSE){
   # Assertions
   assertions::assert_string(dataset)
   assertions::assert_flag(dataframe)
