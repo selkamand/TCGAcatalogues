@@ -25,8 +25,10 @@ powered by sigminer.
 You can install the development version of TCGAcatalogues like so:
 
 ``` r
-# install.packages('remotes')
-remotes::install_github('selkamand/TCGAcatalogues')
+if (!require("pak", quietly = TRUE))
+    install.packages("pak")
+
+pak::pak("selkamand/TCGAcatalogues")
 ```
 
 ## Quick Start
