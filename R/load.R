@@ -1,6 +1,6 @@
 #' Check for available catalogue datasets.
 #'
-#' This function lists the available catalogue datasets included in the TCGAdecomp package.
+#' This function lists the available catalogue datasets included in the TCGAcatalogues package.
 #'
 #' @return A data frame with information about available datasets, including dataset name, source,
 #'         type, genome, and file extension.
@@ -9,17 +9,17 @@
 #' @examples
 #'
 #' # List available datasets
-#' decomp_available()
+#' catalogues_available()
 #'
 #' # Load datasets
-#' decomp_collection_acc <- decomp_load('ACC')
+#' catalogues_collection_acc <- catalogues_load('ACC')
 #'
 #' # Load datasets as data.frames
-#' decomp_dataframe_acc <- decomp_load('ACC', dataframe = TRUE)
+#' catalogues_dataframe_acc <- catalogues_load('ACC', dataframe = TRUE)
 #'
-decomp_available <- function(){
+catalogues_available <- function(){
   # Get the package folder path
-  folder = system.file(package = 'TCGAdecomp')
+  folder = system.file(package = 'TCGAcatalogues')
 
   # List CSV files in the package folder
   paths = dir(folder, pattern = ".csv.gz")
@@ -56,8 +56,8 @@ decomp_available <- function(){
 #' @return A sigverse style catalogue collection (a list of data frames, each containing catalogue data for a unique sample).
 #'         If dataframe is TRUE, a single data frame with the entire dataset is returned.
 #' @export
-#' @inherit decomp_available examples
-decomp_load <- function(dataset, source = c('MC3', 'Firehose'), type = c('SBS_96', 'SBS_6','SBS_1536', 'DBS_78', 'DBS_1248', 'ID83'), genome = c('hg19', 'hg38'), dataframe = FALSE){
+#' @inherit catalogues_available examples
+catalogues_load <- function(dataset, source = c('MC3', 'Firehose'), type = c('SBS_96', 'SBS_6','SBS_1536', 'DBS_78', 'DBS_1248', 'ID83'), genome = c('hg19', 'hg38'), dataframe = FALSE){
   # Assertions
   assertions::assert_string(dataset)
   assertions::assert_flag(dataframe)
@@ -69,20 +69,20 @@ decomp_load <- function(dataset, source = c('MC3', 'Firehose'), type = c('SBS_96
 
 
   # Get information about available datasets
-  df_available <- decomp_available()
+  df_available <- catalogues_available()
 
   # Generate the expected filename for the specified dataset
   filename <- paste(dataset, source, type, genome, 'csv.gz', sep = ".")
 
   # Get the full filepath for the dataset
-  filepath <- system.file(filename, package = "TCGAdecomp")
+  filepath <- system.file(filename, package = "TCGAcatalogues")
 
   # Check if the file exists
   assertions::assert_file_exists(
     filepath,
     msg = '
     Failed to find an appropriate catalogue for dataset: [{dataset}].
-    Please run {.code decomp_available() to see all available datasets}
+    Please run {.code catalogues_available() to see all available datasets}
     '
   )
 

@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-library(TCGAdecomp)
+library(TCGAcatalogues)
 
-test_check("TCGAdecomp")
+test_check("TCGAcatalogues")

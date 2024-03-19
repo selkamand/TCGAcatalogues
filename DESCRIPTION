@@ -22,5 +22,5 @@ Imports:
     assertions,
     rlang,
     tibble
-URL: https://github.com/selkamand/TCGAdecomp
-BugReports: https://github.com/selkamand/TCGAdecomp/issues
+URL: https://github.com/selkamand/TCGAcatalogues
+BugReports: https://github.com/selkamand/TCGAcatalogues/issues
