@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 
 TCGAdecomp is a data package containing each TCGA WGS dataset decomposed for SBS mutational signature analysis.
 
-Original source of data is the TCGAmutations package, with decomposition powered by sigminer.
+Original source of data is the TCGAmutations package, with catalogue powered by sigminer.
 
 
 ## Installation

@@ -1,6 +1,6 @@
-#' Check for available decomposition datasets.
+#' Check for available catalogue datasets.
 #'
-#' This function lists the available decomposition datasets included in the TCGAdecomp package.
+#' This function lists the available catalogue datasets included in the TCGAdecomp package.
 #'
 #' @return A data frame with information about available datasets, including dataset name, source,
 #'         type, genome, and file extension.
@@ -42,18 +42,18 @@ decomp_available <- function(){
 }
 
 
-#' Load a decomposition dataset.
+#' Load a catalogue dataset.
 #'
-#' This function loads a specific decomposition dataset based on the provided dataset name, source,
+#' This function loads a specific catalogue dataset based on the provided dataset name, source,
 #' type, and genome. It can also return the loaded dataset as a data frame.
 #'
 #' @param dataset Name of the dataset to load.
 #' @param source The source of the dataset (e.g., 'MC3' or 'Firehose').
-#' @param type The type of decomposition (e.g., 'SBS_96' or 'SBS_6').
+#' @param type The type of catalogue (e.g., 'SBS_96' or 'SBS_6').
 #' @param genome The genome version (e.g., 'hg19' or 'hg38').
 #' @param dataframe Logical indicating whether to return the loaded dataset as a data frame (default: FALSE).
 #'
-#' @return A sigverse style decomposition collection (a list of data frames, each containing decomposition data for a unique sample).
+#' @return A sigverse style catalogue collection (a list of data frames, each containing catalogue data for a unique sample).
 #'         If dataframe is TRUE, a single data frame with the entire dataset is returned.
 #' @export
 #' @inherit decomp_available examples
@@ -81,7 +81,7 @@ decomp_load <- function(dataset, source = c('MC3', 'Firehose'), type = c('SBS_96
   assertions::assert_file_exists(
     filepath,
     msg = '
-    Failed to find an appropriate decomposition for dataset: [{dataset}].
+    Failed to find an appropriate catalogue for dataset: [{dataset}].
     Please run {.code decomp_available() to see all available datasets}
     '
   )
@@ -92,8 +92,8 @@ decomp_load <- function(dataset, source = c('MC3', 'Firehose'), type = c('SBS_96
 
   # If return_df is FALSE, split the dataset by sample and return as a list
   if(!dataframe){
-    ls_decompositions <- split(df_dataset[-1], df_dataset[["sample"]])
-    return(ls_decompositions)
+    ls_catalogues <- split(df_dataset[-1], df_dataset[["sample"]])
+    return(ls_catalogues)
   }
 
   # If return_df is TRUE, return the entire dataset as a data frame

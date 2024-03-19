@@ -2,7 +2,7 @@
 % Please edit documentation in R/load.R
 \name{decomp_available}
 \alias{decomp_available}
-\title{Check for available decomposition datasets.}
+\title{Check for available catalogue datasets.}
 \usage{
 decomp_available()
 }
@@ -11,7 +11,7 @@ A data frame with information about available datasets, including dataset name, 
 type, genome, and file extension.
 }
 \description{
-This function lists the available decomposition datasets included in the TCGAdecomp package.
+This function lists the available catalogue datasets included in the TCGAdecomp package.
 }
 \examples{
 

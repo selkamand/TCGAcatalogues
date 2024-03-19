@@ -17,7 +17,7 @@ coverage](https://codecov.io/gh/selkamand/TCGAdecomp/branch/master/graph/badge.s
 TCGAdecomp is a data package containing each TCGA WGS dataset decomposed
 for SBS mutational signature analysis.
 
-Original source of data is the TCGAmutations package, with decomposition
+Original source of data is the TCGAmutations package, with catalogue
 powered by sigminer.
 
 ## Installation

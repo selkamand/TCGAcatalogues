@@ -2,7 +2,7 @@
 % Please edit documentation in R/load.R
 \name{decomp_load}
 \alias{decomp_load}
-\title{Load a decomposition dataset.}
+\title{Load a catalogue dataset.}
 \usage{
 decomp_load(
   dataset,
@@ -17,18 +17,18 @@ decomp_load(
 
 \item{source}{The source of the dataset (e.g., 'MC3' or 'Firehose').}
 
-\item{type}{The type of decomposition (e.g., 'SBS_96' or 'SBS_6').}
+\item{type}{The type of catalogue (e.g., 'SBS_96' or 'SBS_6').}
 
 \item{genome}{The genome version (e.g., 'hg19' or 'hg38').}
 
 \item{dataframe}{Logical indicating whether to return the loaded dataset as a data frame (default: FALSE).}
 }
 \value{
-A sigverse style decomposition collection (a list of data frames, each containing decomposition data for a unique sample).
+A sigverse style catalogue collection (a list of data frames, each containing catalogue data for a unique sample).
 If dataframe is TRUE, a single data frame with the entire dataset is returned.
 }
 \description{
-This function loads a specific decomposition dataset based on the provided dataset name, source,
+This function loads a specific catalogue dataset based on the provided dataset name, source,
 type, and genome. It can also return the loaded dataset as a data frame.
 }
 \examples{
